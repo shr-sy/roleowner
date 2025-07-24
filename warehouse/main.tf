@@ -1,5 +1,5 @@
 module "transfer_ownership" {
-  source = "./warehouse"
+  source = "./ware"
 
   target_warehouse = var.target_warehouse
   new_owner        = var.new_owner
