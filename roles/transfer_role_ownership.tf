@@ -7,7 +7,6 @@ terraform {
   }
 }
 
-
 variable "target_role" {
   type = string
 }
@@ -17,14 +16,7 @@ variable "new_owner" {
 }
 
 resource "snowflake_role_ownership_grant" "role_ownership_transfer" {
-  on {
-    object_type = "ROLE"
-    object_name = var.target_role
-  }
-
-  to {
-    role_name = var.new_owner
-  }
-
+  on_role_name  = var.target_role
+  to_role_name  = var.new_owner
   current_grants = true
 }
