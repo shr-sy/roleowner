@@ -1,8 +1,8 @@
 module "transfer_ownership" {
-  source = "./roles"
+  source = "./warehouse"
 
-  target_role = var.target_role
-  new_owner   = var.new_owner
+  target_warehouse = var.target_warehouse
+  new_owner        = var.new_owner
 
   providers = {
     snowflake = snowflake
