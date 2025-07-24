@@ -17,11 +17,11 @@ variable "snowflake_password" {
 variable "target_role" {
   description = "Role whose ownership needs to be changed"
   type        = string
-  default     = "HCPUSER"
+  default     = "HCP_USER"
 }
 
 variable "new_owner" {
   description = "New owner of the target role"
   type        = string
-  default     = "SYSADMIN"
+  default     = "USERADMIN"
 }
