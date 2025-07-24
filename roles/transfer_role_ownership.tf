@@ -16,7 +16,7 @@ variable "new_owner" {
   type = string
 }
 
-resource "snowflake_grant_ownership" "transfer_role" {
+resource "snowflake_role_ownership_grant" "transfer_role" {
   on {
     object_type = "ROLE"
     object_name = var.target_role
